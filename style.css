@@ -19,7 +19,7 @@ body {
     align-items: flex-end;
     flex-grow: 2;
     flex-shrink: 10;
-    background: url(/extras/cheng-feng.jpg);
+    background: url(cheng-feng.jpg);
     background-size: cover;
     background-position: top;
     color: var(--textColor2);
