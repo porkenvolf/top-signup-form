@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="equalize.css" />
         <link rel="stylesheet" href="style.css" />
         <script src="./js/footer.js" defer></script>
+        <script src="./js/validation.js" defer></script>
     </head>
     <body>
         <div class="panelLeft">
@@ -33,47 +34,90 @@
                 <form action="">
                     <div class="sub-form">
                         <div class="form-item">
-                            <label for="first-name">FIRST NAME</label>
+                            <label
+                                for="first-name"
+                                aria-label="first name"
+                                class="required"
+                            >
+                                FIRST NAME
+                            </label>
                             <input
+                                required
+                                aria-required="true"
                                 type="text"
                                 id="first-name"
                                 name="first-name"
+                                placeholder=" "
+                                minlength="2"
+                                maxlength="15"
                             />
                         </div>
                         <div class="form-item">
-                            <label for="last-name">LAST NAME</label>
+                            <label for="last-name" class="required">
+                                LAST NAME
+                            </label>
                             <input
+                                required
+                                aria-required="true"
                                 type="text"
                                 id="last-name"
                                 name="last-name"
+                                placeholder=" "
+                                minlength="2"
+                                maxlength="15"
                             />
                         </div>
                     </div>
                     <div class="sub-form">
                         <div class="form-item">
-                            <label for="email">EMAIL</label>
-                            <input type="email" id="email" name="email" />
+                            <label for="email" class="required"> EMAIL </label>
+                            <input
+                                required
+                                aria-required="true"
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder=" "
+                            />
                         </div>
                         <div class="form-item">
-                            <label for="phone">PHONE NUMBER</label>
-                            <input type="number" id="phone" name="phone" />
+                            <label for="phone"> PHONE NUMBER </label>
+                            <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                placeholder=" "
+                                maxlength="15"
+                            />
                         </div>
                     </div>
                     <div class="sub-form">
                         <div class="form-item">
-                            <label for="password">PASSWORD</label>
+                            <label for="password" class="required">
+                                PASSWORD
+                            </label>
                             <input
+                                required
+                                aria-required="true"
                                 type="password"
                                 id="password"
                                 name="password"
+                                placeholder=" "
+                                minlength="8"
                             />
                         </div>
                         <div class="form-item">
-                            <label for="phone">CONFIRM PASSWORD</label>
+                            <label for="confirm-password" class="required">
+                                CONFIRM PASSWORD
+                            </label>
                             <input
+                                required
+                                aria-required="true"
                                 type="password"
                                 id="confirm-password"
                                 name="confirm-password"
+                                placeholder=" "
+                                minlength="8"
                             />
                         </div>
                     </div>
@@ -81,14 +125,18 @@
                         <button>Create Account</button>
                     </div>
                 </form>
+                <footer>
+                    <small>
+                        &copy; Copyright <span id="firstYear">2022</span> -
+                        <span id="currentYear"></span
+                        ><a
+                            href="https://github.com/porkenvolf"
+                            target="”_blank”"
+                            >Porkenvölf
+                        </a>
+                    </small>
+                </footer>
             </div>
-            <footer class="credits">
-                &copy; Copyright <span id="firstYear">2022</span> -
-                    <span id="currentYear"></span
-                    ><a href="https://github.com/porkenvolf" target="”_blank”"
-                        >Porkenvölf</a
-                    >
-            </footer>
         </div>
     </body>
 </html>

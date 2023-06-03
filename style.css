@@ -5,6 +5,8 @@
 
     --textColor1: rgb(240, 240, 240);
     --textColor2: rgb(169, 169, 169);
+
+    --primaryColor: rgb(255, 0, 128);
 }
 body {
     display: flex;
@@ -43,34 +45,35 @@ body {
     flex-shrink: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: var(--bgColor1);
     font-family: sans-serif;
     color: var(--textColor1);
 }
 .panelRight .container {
-    position: relative;
-    z-index: 2;
     width: min(100%, 800px);
     display: flex;
     flex-direction: column;
-    border: none;
+    justify-content: space-between;
     border-radius: 25px;
     padding: 20px;
-    
     background: var(--bgColor1);
+    height: 100%;
 }
 .title-box {
-    flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
 }
+form{
+    flex: 1;
+}
 h1 {
     font-size: 50px;
     padding: 20px;
+    margin-top: 125px;
 }
 h2 {
     margin-bottom: 30px;
@@ -82,6 +85,7 @@ h2 {
     flex-wrap: wrap;
 }
 .form-item {
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -91,6 +95,13 @@ h2 {
 label {
     font-size: smaller;
     color: var(--textColor2);
+}
+.required::after {
+    color: var(--primaryColor);
+    font-size: 20px;
+    content: "*";
+    position: absolute;
+    top: 15px;
 }
 input,
 button {
@@ -104,6 +115,15 @@ input {
     width: 100%;
     background-color: var(--bgColor2);
 }
+input:focus{
+    outline: 0;
+}
+input:invalid{
+    border: 1px solid var(--primaryColor);
+}
+input:placeholder-shown{
+    border: 1px solid var(--borderColor1);
+}
 button {
     align-self: center;
     padding: 25px;
@@ -111,5 +131,13 @@ button {
     font-size: 30px;
     min-width: 300px;
     border: none;
-    background-color: rgb(255, 0, 128);
+    background-color: var(--primaryColor);
+}
+footer{
+    text-align: center;
+    padding: 10px;
+    color: var(--textColor2);
+}
+footer a{
+    color: var(--textColor2);
 }
