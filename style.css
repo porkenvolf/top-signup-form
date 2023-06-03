@@ -1,5 +1,5 @@
 :root {
-    --bgColor1: rgb(39, 39, 39);
+    --bgColor1: rgb(28, 28, 33);
     --bgColor2: rgb(62, 62, 62);
     --borderColor1: rgb(115, 115, 115);
 
@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    flex-grow: 2;
+    flex-grow: 3;
     flex-shrink: 10;
     background: url(cheng-feng.jpg);
     background-size: cover;
@@ -45,7 +45,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgb(28, 28, 33);
+    background: var(--bgColor1);
     font-family: sans-serif;
     color: var(--textColor1);
 }
@@ -58,13 +58,15 @@ body {
     border: none;
     border-radius: 25px;
     padding: 20px;
-    background-color: var(--bgColor1);
+    
+    background: var(--bgColor1);
 }
 .title-box {
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 h1 {
     font-size: 50px;
@@ -74,10 +76,7 @@ h2 {
     margin-bottom: 30px;
     padding: 20px;
 }
-form {
-    flex: 5;
-    gap: 20px;
-}
+
 .sub-form {
     display: flex;
     flex-wrap: wrap;
@@ -100,15 +99,17 @@ button {
     padding: 15px;
 }
 input {
+    font-size: 25px;
     border: 1px solid var(--borderColor1);
     width: 100%;
     background-color: var(--bgColor2);
 }
 button {
+    align-self: center;
     padding: 25px;
     font-weight: 800;
-    font-size: 20px;
-    min-width: 200px;
+    font-size: 30px;
+    min-width: 300px;
     border: none;
     background-color: rgb(255, 0, 128);
 }
