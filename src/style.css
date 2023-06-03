@@ -1,0 +1,81 @@
+:root {
+    --bgColor1: rgb(39, 39, 39);
+    --bgColor2: rgb(62, 62, 62);
+    --borderColor1: rgb(115, 115, 115);
+    
+    
+    --textColor1: rgb(240, 240, 240);
+    --textColor2: rgb(169, 169, 169);
+}
+body {
+    display: flex;
+    height: 100vh;
+}
+.panelLeft {
+    flex-grow: 1;
+    flex-shrink: 10;
+    background: url(/extras/cheng-feng-psdV2Rl-GvU-unsplash.jpg);
+    background-size: cover;
+    background-position: top;
+}
+.panelRight {
+    flex-grow: 1;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 25px;
+    background: var(--bgColor1);
+    font-family: sans-serif;
+    color: var(--textColor1);
+}
+.title-box{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h2{
+    margin-bottom: 30px;
+    padding: 10px;
+}
+form {
+    width: max(200px, 60%);
+    flex: 5;
+    gap: 20px;
+}
+.sub-form {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.form-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    padding: 10px;
+}
+label {
+    font-size: smaller;
+    color: var(--textColor2);
+}
+input,button {
+
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+input{
+    border: 1px solid var(--borderColor1);
+    width: 100%;
+    background-color: var(--bgColor2);
+}
+button{
+    padding: 15px;
+    font-weight: 800;
+    border: none;
+    background-color: rgb(255, 0, 128);
+}
