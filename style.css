@@ -7,6 +7,7 @@
     --textColor2: rgb(169, 169, 169);
 
     --primaryColor: rgb(255, 0, 128);
+    --primaryColorLight: rgb(255, 83, 169);
 }
 body {
     display: flex;
@@ -34,6 +35,8 @@ body {
     white-space: nowrap;
     overflow: hidden;
     color: var(--textColor2);
+    font-family: sans-serif;
+    font-size: 16px;
 }
 .credits a {
     color: var(--textColor2);
@@ -65,7 +68,7 @@ body {
     justify-content: center;
     text-align: center;
 }
-form{
+form {
     flex: 1;
 }
 h1 {
@@ -111,30 +114,40 @@ input {
     border: 1px solid var(--borderColor1);
     width: 100%;
     background-color: var(--bgColor2);
+    color: var(--textColor1);
 }
-input:focus{
+input:focus {
     outline: 0;
+    background-color: rgb(85, 85, 85);
 }
-input:invalid{
+input:invalid {
     border: 1px solid var(--primaryColor);
 }
-input:placeholder-shown{
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--textColor1);
+    -webkit-box-shadow: 0 0 0 40px var(--bgColor2) inset !important;
+}
+input:placeholder-shown {
     border: 1px solid var(--borderColor1);
 }
 button {
     align-self: center;
     padding: 15px;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 25px;
     min-width: 300px;
     border: none;
     background-color: var(--primaryColor);
 }
-footer{
+button:hover {
+    background-color: var(--primaryColorLight);
+    cursor: pointer;
+}
+footer {
     text-align: center;
     padding: 10px;
     color: var(--textColor2);
 }
-footer a{
+footer a {
     color: var(--textColor2);
 }

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Sign up!</title>
         <link rel="stylesheet" href="equalize.css" />
+
         <link rel="stylesheet" href="style.css" />
         <script src="./js/footer.js" defer></script>
         <script src="./js/validation.js" defer></script>
@@ -13,16 +14,18 @@
     <body>
         <div class="panelLeft">
             <div class="credits">
-                Photo by
-                <a
-                    href="https://unsplash.com/@chengfengrecord?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                    >cheng feng</a
-                >
-                on
-                <a
-                    href="https://unsplash.com/es/fotos/psdV2Rl-GvU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-                    >Unsplash</a
-                >
+                <small>
+                    Photo by
+                    <a
+                        href="https://unsplash.com/@chengfengrecord?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        >cheng feng</a
+                    >
+                    on
+                    <a
+                        href="https://unsplash.com/es/fotos/psdV2Rl-GvU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        >Unsplash</a
+                    >
+                </small>
             </div>
         </div>
         <div class="panelRight">
@@ -53,7 +56,11 @@
                             />
                         </div>
                         <div class="form-item">
-                            <label for="last-name" class="required">
+                            <label
+                                for="last-name"
+                                class="required"
+                                aria-label="last name"
+                            >
                                 LAST NAME
                             </label>
                             <input
@@ -70,7 +77,13 @@
                     </div>
                     <div class="sub-form">
                         <div class="form-item">
-                            <label for="email" class="required"> EMAIL </label>
+                            <label
+                                for="email"
+                                class="required"
+                                aria-label="email"
+                            >
+                                EMAIL
+                            </label>
                             <input
                                 required
                                 aria-required="true"
@@ -81,7 +94,9 @@
                             />
                         </div>
                         <div class="form-item">
-                            <label for="phone"> PHONE NUMBER </label>
+                            <label for="phone" aria-label="phone number">
+                                PHONE NUMBER
+                            </label>
                             <input
                                 type="tel"
                                 id="phone"
@@ -93,7 +108,11 @@
                     </div>
                     <div class="sub-form">
                         <div class="form-item">
-                            <label for="password" class="required">
+                            <label
+                                for="password"
+                                class="required"
+                                aria-label="password"
+                            >
                                 PASSWORD
                             </label>
                             <input
@@ -107,7 +126,11 @@
                             />
                         </div>
                         <div class="form-item">
-                            <label for="confirm-password" class="required">
+                            <label
+                                for="confirm-password"
+                                class="required"
+                                aria-label="confirm password"
+                            >
                                 CONFIRM PASSWORD
                             </label>
                             <input
